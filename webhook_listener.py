@@ -36,6 +36,10 @@ def create_feature_branch(issue_number, issue_title):
     else:
         print(f'Failed to create branch: {response.content}')
 
+@app.route('/', methods=['GET','POST'])
+def index():
+    return "HI!"
+
 @app.route('/webhook', methods=['POST'])
 def webhook():
     payload = request.get_data()

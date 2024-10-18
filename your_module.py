@@ -4,6 +4,6 @@ There's nothing really here except a file for linting.
 """
 
 def authenticate(username):
-    return true
+    return username 
 
 print ("My module.")

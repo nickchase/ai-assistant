@@ -42,18 +42,14 @@ def index():
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
-    print("webhook")
     payload = request.get_data()
     signature = request.headers.get('X-Hub-Signature-256')
-
-    print(request.headers.get('X-Github-Event'))
 
     if not verify_signature(payload, signature):
         print('error')
         return jsonify({'message': 'Invalid signature'}), 400
 
     event = request.headers.get('X-GitHub-Event')
-    print(event)
     if event == 'issues':
         issue = request.json['issue']
         if request.json['action'] == 'opened':

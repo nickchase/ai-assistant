@@ -64,8 +64,8 @@ def webhook():
 
 def assign_reviewers(pull_number):
     # Placeholder logic for assigning reviewers
-    potential_reviewers = ['alice', 'bob', 'carol']
-    reviewers = potential_reviewers[:2]  # Assign first two for simplicity
+    potential_reviewers = ['roadnick', 'alice', 'bob', 'carol']
+    reviewers = potential_reviewers[:1]  # Assign first two for simplicity
 
     url = f'https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/pulls/{pull_number}/requested_reviewers'
     headers = {'Authorization': f'token {GITHUB_TOKEN}'}

@@ -38,7 +38,7 @@ def create_feature_branch(issue_number, issue_title):
 
 @app.route('/', methods=['GET','POST'])
 def index():
-    return "HI!"
+    return "HI! Again"
 
 @app.route('/webhook', methods=['POST'])
 def webhook():

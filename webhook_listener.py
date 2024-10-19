@@ -45,7 +45,7 @@ def webhook():
     payload = request.get_data()
     signature = request.headers.get('X-Hub-Signature-256')
 
-    print(request.headers.get('X-Github-Event')
+    print(request.headers.get('X-Github-Event'))
 
     if not verify_signature(payload, signature):
         print('error')

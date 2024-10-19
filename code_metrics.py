@@ -1,4 +1,5 @@
-from radon.metrics import mi_visit, h_visit, cc_visit
+from radon.metrics import mi_visit, h_visit
+from radon.complexity import cc_visit
 import os
 
 def compute_code_metrics(file_path):

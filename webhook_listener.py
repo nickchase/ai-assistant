@@ -48,6 +48,7 @@ def webhook():
         return jsonify({'message': 'Invalid signature'}), 400
 
     event = request.headers.get('X-GitHub-Event')
+    print(f'Event = {event}')
     if event == 'issues':
         issue = request.json['issue']
         if request.json['action'] == 'opened':

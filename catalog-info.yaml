@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ai-assistant
+  annotations:
+    github.com/project-slug: nickchase/ai-assistant
+spec:
+  type: other
+  lifecycle: unknown
+  owner: nickchase
